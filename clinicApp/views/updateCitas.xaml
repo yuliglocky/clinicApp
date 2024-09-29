@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clinicApp.views.updateCitas"
+             Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Primer Grid con el formulario y el banner -->
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Banner con borde -->
+            <Frame CornerRadius="10" HasShadow="False" Padding="0" Margin="0" BackgroundColor="Transparent" 
+               BorderColor="#9E8122" Grid.Row="0">
+                <BoxView Color="#9E8122" HeightRequest="50" />
+            </Frame>
+
+            <Label Text="Actualizar Cita" TextColor="White" FontSize="24" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" />
+
+            <!-- Formulario -->
+            <ScrollView Grid.Row="1" BackgroundColor="#ffffff" Padding="20">
+                <VerticalStackLayout Spacing="20">
+
+                    <Label Text="Información de la Cita:" FontSize="14" FontAttributes="Bold" TextColor="#1C4266" Margin="0,10,0,5"/>
+
+                    <Label Text="Doctor Actual:" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                    <Label x:Name="DoctorLabel" FontSize="16" TextColor="Black" />
+
+                    <Label Text="Paciente Actual:" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                    <Label x:Name="PacienteLabel" FontSize="16" TextColor="Black" />
+                    <Label Text="Seleccionar Doctor: " FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                    <Grid>
+                        <BoxView BackgroundColor="#dddddd" CornerRadius="5"  HorizontalOptions="FillAndExpand"/>
+
+
+                        <Picker Grid.Column="1" x:Name="DoctorPicker" TextColor="Black" 
+                                    BackgroundColor="LightGray"/>
+                    </Grid>
+                    <Label Text="Actualizar fecha de consulta" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                    <Grid>
+                        
+                            <DatePicker Grid.Column="1" x:Name="ConsultaDatePicker" TextColor="Black" 
+                                        BackgroundColor="LightGray" />
+                        
+                    </Grid>
+
+                    <Button Text="Actualizar Cita" Clicked="OnUpdateClicked" BackgroundColor="#1C4266" TextColor="White"/>
+                    <Button Text="Eliminar Cita" Clicked="OnDeleteClicked" BackgroundColor="Red" TextColor="White"/>
+                </VerticalStackLayout>
+            </ScrollView>
+        </Grid>
+
+        <!-- Segundo Grid con el banner y el frame gris -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Banner de Historial del Paciente con borde -->
+            <Frame CornerRadius="10" HasShadow="False" Padding="0" Margin="0" BackgroundColor="Transparent" 
+               BorderColor="#9E8122" Grid.Row="0">
+                <BoxView Color="#9E8122" HeightRequest="50" />
+            </Frame>
+
+            <Label Text="Historial de Citas" TextColor="White" FontSize="24" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" />
+
+            <Frame BackgroundColor="White" CornerRadius="10" Grid.Row="1" Padding="10">
+                <Label Text="Contenido del historial de citas" />
+            </Frame>
+        </Grid>
+    </Grid>
+
+
+</ContentPage>

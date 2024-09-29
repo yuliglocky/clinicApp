@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clinicApp.views.InicioPage"
+             BackgroundColor="LightGray">
+
+    <!-- Contenedor absoluto para posicionar el botón en la parte superior derecha -->
+  
+        <!-- Contenido principal con Sidebar y ContentView -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Sidebar (Frame) en la primera columna -->
+            <ContentView BackgroundColor="White" Grid.Column="0" Padding="10">
+
+
+                <StackLayout VerticalOptions="FillAndExpand" Spacing="20">
+
+                    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+
+                        <Image Source="logo1.png" WidthRequest="50" HeightRequest="41" VerticalOptions="Center" Grid.Column="0"/>
+                        <Label Text="Clínica UTP" FontSize="16" TextColor="#1C4266" FontAttributes="Bold" VerticalOptions="Center" Grid.Column="1" Margin="10,0,0,0"/>
+
+                    </Grid>
+
+                    <!-- Línea amarilla (BoxView) -->
+                    <BoxView Color="#E7CB71" 
+                             HeightRequest="2" 
+                             VerticalOptions="Start" />
+
+                    <!-- Botones de navegación -->
+                    <StackLayout VerticalOptions="Center" Spacing="10" >
+                    <Button x:Name="btnPacientes" 
+                            Text="Pacientes" 
+                            Clicked="OnPacientesButtonClicked" >
+                        <Button.Shadow>
+                            <Shadow Brush="Black" Offset="0,6" Radius="3" Opacity="0.10"/>
+                        </Button.Shadow>
+                    </Button>
+
+                    <Button x:Name="btnCitas" 
+                            Text="Citas" 
+                            Clicked="OnCitasButtonClicked" 
+                            BackgroundColor="LightGrey" >
+                        <Button.Shadow>
+                            <Shadow Brush="Black" Offset="0,6" Radius="3" Opacity="0.10"/>
+                        </Button.Shadow>
+                    </Button>
+
+                    <Button x:Name="btnPersonalMedico" 
+                            Text="Personal Medico" 
+                            Clicked="OnViewDoctorClicked" >
+                        <Button.Shadow>
+                            <Shadow Brush="Black" Offset="0,6" Radius="3" Opacity="0.10"/>
+                        </Button.Shadow>
+                    </Button>
+
+                    <Button x:Name="btnMedicamentos" 
+                            Text="Medicamentos" 
+                            Clicked="OnViewMedicamentosClicked" >
+                        <Button.Shadow>
+                            <Shadow Brush="Black" Offset="0,6" Radius="3" Opacity="0.10"/>
+                        </Button.Shadow>
+                    </Button>
+                </StackLayout>
+
+                    <!-- Espaciador para empujar los botones de configuración al fondo -->
+                    <StackLayout VerticalOptions="FillAndExpand" />
+
+                    <!-- Botones de Configuración y Logout -->
+                    <StackLayout VerticalOptions="End" Spacing="10">
+                        <BoxView HeightRequest="2" BackgroundColor="#E7CB71" Margin="0,20,0,0"/>
+                    <Button Text="Cerrar sesión" BackgroundColor="Transparent"  Clicked="InicioClicked" Margin="0,0, 0, 10" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+
+            <!-- Área de contenido dinámico (a la derecha) -->
+            <ContentView Grid.Column="1" 
+                         x:Name="ContentContainer"
+                         BackgroundColor="White"
+                         Margin="10, 0, 0, 0"
+                         Padding="10">
+
+                <!-- Contenido predeterminado o mensaje de bienvenida -->
+            </ContentView>
+        </Grid>
+        
+
+</ContentPage>

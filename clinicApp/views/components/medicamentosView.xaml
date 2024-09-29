@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clinicApp.views.components.medicamentosView">
+
+    <Grid>
+        <Grid RowDefinitions="Auto,*">
+            <Grid Grid.Row="0">
+                <VerticalStackLayout>
+                    <Grid VerticalOptions="Center" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Medicamentos" FontSize="18" TextColor="#1C4266" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0" Margin="0,20,0,0"/>
+                        <Button ImageSource="adduser.png" 
+                                Text="Añadir Medicamentos" 
+                                TextColor="White" 
+                                FontSize="12" 
+                                FontAttributes="Bold" 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="End" 
+                                BackgroundColor="#4F7396" 
+                                Grid.Column="3" 
+                                Clicked="OnMedicamento"/>
+
+                    </Grid>
+                </VerticalStackLayout>
+                <BoxView HeightRequest="2" BackgroundColor="#E7CB71" Margin="0,60,0,25"/>
+            </Grid>
+
+            <!-- ScrollView con CollectionView -->
+            <ScrollView Grid.Row="1" Margin="10,0,10,10">
+                <CollectionView x:Name=" MedicamentosListView" SelectionMode="Single" >
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="2" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#F2F2F2"
+                                   CornerRadius="10"
+                                   Margin="3"
+                                   Padding="10"
+                                   HasShadow="False"
+                                   BorderColor="Transparent">
+                                <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="5">
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="10">
+                                        <Image Source="logo1.png"
+                                               WidthRequest="30"
+                                               HeightRequest="30"
+                                               Aspect="AspectFit"/>
+                                        <Label Text="Medicamentos"
+                                               FontSize="Small"
+                                               TextColor="Black"
+                                               FontAttributes="Bold"
+                                               VerticalOptions="Center"/>
+                                    </StackLayout>
+                                    <Label Text="{Binding Nombre}"
+                                          FontSize="Small"
+                                         TextColor="Black"
+                                         FontAttributes="Bold"
+                                         VerticalOptions="Center"/>
+                                    <Grid ColumnDefinitions="Auto, *, Auto"
+                                          VerticalOptions="Center">
+
+                                        
+                                        <Button Grid.Column="0"
+                                                Text="-"
+                                                TextColor="White"
+                                                FontAttributes="Bold"
+                                                BackgroundColor="#4F7396"
+                                                WidthRequest="50"
+                                                Clicked="DisminuirCantidad"
+                                                HorizontalOptions="Start"/>
+
+                                        
+                                        <Label Grid.Column="1"
+                                               Text="{Binding cantidad}"
+                                               FontSize="Small"
+                                               TextColor="Black"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center"/>
+
+                                        
+                                        <Button Grid.Column="2"
+                                                Text="+"
+                                                TextColor="White"
+                                                FontAttributes="Bold"
+                                                BackgroundColor="#4F7396"
+                                                WidthRequest="50"
+                                                Clicked="AumentarCantidad"
+                                                HorizontalOptions="End"/>
+
+                                    </Grid>
+
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+        </Grid>
+    </Grid>
+</ContentView>

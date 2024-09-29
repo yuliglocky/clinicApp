@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clinicApp.views.components.PacientesView">
+    <Grid>
+        <Grid RowDefinitions="Auto,*, Auto" Padding="10">
+            <VerticalStackLayout>
+                <Grid VerticalOptions="Center" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label Text="Pacientes" FontSize="18" TextColor="#1C4266" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0"/>
+                    <SearchBar Placeholder="Buscar Paciente" WidthRequest="388" HorizontalOptions="Center" BackgroundColor="#DDDDDD" Margin="0, 0, 100, 0" Grid.Column="1"/>
+                    <Button ImageSource="adduser.png" 
+                            Text="Añadir Paciente" 
+                            TextColor="White" 
+                            FontSize="12" 
+                            FontAttributes="Bold" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="End" 
+                            BackgroundColor="#4F7396" 
+                            Grid.Column="3"
+                            Clicked="OnAddPacienteClicked"/>
+                    </Grid>
+            </VerticalStackLayout>
+            <BoxView HeightRequest="2" BackgroundColor="#E7CB71" Margin="0,50,0,25"/>
+            
+           
+            <ScrollView Grid.Row="1" Margin="10,0,10,10">
+                <CollectionView x:Name="UsersListView" SelectionMode="Single" >
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="4" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#F2F2F2"
+                                   CornerRadius="10"
+                                   Margin="3"
+                                   Padding="10"
+                                   HasShadow="False"
+                                   BorderColor="Transparent">
+                                <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="5">
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="10">
+                                        <Image Source="logo1.png"
+                                               WidthRequest="30"
+                                               HeightRequest="30"
+                                               Aspect="AspectFit"/>
+                                        <Label Text="{Binding Nombre}"
+                                               FontSize="Medium"
+                                               TextColor="Black"
+                                               FontAttributes="Bold"
+                                               VerticalOptions="Center"/>
+                                    </StackLayout>
+                                    <Button Text="Ver Detalles"
+                                            Clicked="OnViewDetailsClicked"
+                                            CommandParameter="{Binding Id}" 
+                                            Background="#C0A343" TextColor="White"/>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+        </Grid>
+    </Grid>
+</ContentView>

@@ -1,0 +1,149 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = clinicApp
+build_property.ProjectDir = C:\Users\ceden\source\repos\clinicApp\clinicApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/components/anadirAdmin.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.components.anadirAdmin.xaml
+build_metadata.AdditionalFiles.TargetPath = views\components\anadirAdmin.xaml
+build_metadata.AdditionalFiles.RelativePath = views\components\anadirAdmin.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/components/anadirPersonal.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.components.anadirPersonal.xaml
+build_metadata.AdditionalFiles.TargetPath = views\components\anadirPersonal.xaml
+build_metadata.AdditionalFiles.RelativePath = views\components\anadirPersonal.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/components/CitaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.components.CitaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = views\components\CitaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = views\components\CitaPage.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/components/citasView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.components.citasView.xaml
+build_metadata.AdditionalFiles.TargetPath = views\components\citasView.xaml
+build_metadata.AdditionalFiles.RelativePath = views\components\citasView.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/components/DoctorPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.components.DoctorPage.xaml
+build_metadata.AdditionalFiles.TargetPath = views\components\DoctorPage.xaml
+build_metadata.AdditionalFiles.RelativePath = views\components\DoctorPage.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/components/DoctorView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.components.DoctorView.xaml
+build_metadata.AdditionalFiles.TargetPath = views\components\DoctorView.xaml
+build_metadata.AdditionalFiles.RelativePath = views\components\DoctorView.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/components/FormularioPaciente.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.components.FormularioPaciente.xaml
+build_metadata.AdditionalFiles.TargetPath = views\components\FormularioPaciente.xaml
+build_metadata.AdditionalFiles.RelativePath = views\components\FormularioPaciente.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/components/MedicamentosPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.components.MedicamentosPage.xaml
+build_metadata.AdditionalFiles.TargetPath = views\components\MedicamentosPage.xaml
+build_metadata.AdditionalFiles.RelativePath = views\components\MedicamentosPage.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/components/medicamentosView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.components.medicamentosView.xaml
+build_metadata.AdditionalFiles.TargetPath = views\components\medicamentosView.xaml
+build_metadata.AdditionalFiles.RelativePath = views\components\medicamentosView.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/components/MensajesView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.components.MensajesView.xaml
+build_metadata.AdditionalFiles.TargetPath = views\components\MensajesView.xaml
+build_metadata.AdditionalFiles.RelativePath = views\components\MensajesView.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/components/PacientesView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.components.PacientesView.xaml
+build_metadata.AdditionalFiles.TargetPath = views\components\PacientesView.xaml
+build_metadata.AdditionalFiles.RelativePath = views\components\PacientesView.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/components/trabajoView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.components.trabajoView.xaml
+build_metadata.AdditionalFiles.TargetPath = views\components\trabajoView.xaml
+build_metadata.AdditionalFiles.RelativePath = views\components\trabajoView.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/InicioPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.InicioPage.xaml
+build_metadata.AdditionalFiles.TargetPath = views\InicioPage.xaml
+build_metadata.AdditionalFiles.RelativePath = views\InicioPage.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/PacientesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.PacientesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = views\PacientesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = views\PacientesPage.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/updateCitas.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.updateCitas.xaml
+build_metadata.AdditionalFiles.TargetPath = views\updateCitas.xaml
+build_metadata.AdditionalFiles.RelativePath = views\updateCitas.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/updateDoctorPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.updateDoctorPage.xaml
+build_metadata.AdditionalFiles.TargetPath = views\updateDoctorPage.xaml
+build_metadata.AdditionalFiles.RelativePath = views\updateDoctorPage.xaml
+
+[C:/Users/ceden/source/repos/clinicApp/clinicApp/views/updateUserPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clinicApp.views.updateUserPage.xaml
+build_metadata.AdditionalFiles.TargetPath = views\updateUserPage.xaml
+build_metadata.AdditionalFiles.RelativePath = views\updateUserPage.xaml

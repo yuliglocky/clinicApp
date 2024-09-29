@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clinicApp.MainPage">
+
+
+    <!-- Definir fondo blanco -->
+    <ContentPage.BackgroundColor>
+        <Color>White</Color>
+    </ContentPage.BackgroundColor>
+
+    <!-- Cuadro centrado con imagen al lado -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Imagen al lado del cuadro -->
+        <Image Source="banner.png"
+               Grid.Column="0"
+               HeightRequest="787"
+               Aspect="AspectFit"
+               VerticalOptions="Center"
+               HorizontalOptions="Center" />
+
+        <!-- Cuadro de login -->
+        <Frame Grid.Column="1"
+               Padding="20"
+               BackgroundColor="White"
+               CornerRadius="10"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               WidthRequest="400"
+               HeightRequest="400">
+
+            <VerticalStackLayout Spacing="25">
+                <!-- Logo -->
+
+
+                <Label                   
+                 HeightRequest="25"/>
+                <Label Text="Inicio de sesión  " TextColor="#1C4266"  
+                       FontAttributes="Bold"
+                       FontSize="Title"
+                      VerticalOptions="Center"
+                    HorizontalOptions="Center"/>
+            
+                    <Entry Placeholder="Username"
+                       x:Name="UsernameEntry"
+                       Keyboard="Default"
+                       HorizontalOptions="Fill"
+                       TextColor="Black"
+                       BackgroundColor="LightGray" />
+
+                <Entry Placeholder="Password"
+                       x:Name="PasswordEntry"
+                       IsPassword="True"
+                       HorizontalOptions="Fill"
+                       TextColor="Black"
+                       BackgroundColor="LightGray" />
+
+                <!-- Login Button -->
+                <Button Text="Login"
+                       Background="#1C4266" 
+                        TextColor="White"
+                        Clicked="OnLoginClicked"
+                        HorizontalOptions="Fill" />
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+
+
+</ContentPage>

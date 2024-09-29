@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clinicApp.views.components.anadirAdmin">
+
+    <ScrollView Padding="10">
+
+        <Frame CornerRadius="10" HasShadow="True" Padding="20" BackgroundColor="White" BorderColor="Transparent" >
+            <StackLayout Spacing="15">
+                <!-- Espaciado entre elementos del StackLayout -->
+
+                <!-- Logo -->
+                <Image
+                    Source="logo1.png"
+                    HeightRequest="120"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="dot net bot in a race car number eight" />
+
+                <!-- Entry fields for admin details -->
+                <Label Text="Nombre" TextColor="Black" />
+                <!-- Texto en color negro -->
+                <Entry x:Name="NombreEntry" 
+                       Placeholder="Ingresa el nombre del doctor"
+                       BackgroundColor="LightGray" 
+                       TextColor="Black"
+                       Margin="0,0,0,10"/>
+                <!-- Separación con margen -->
+
+                <Label Text="Especialidad" TextColor="Black" />
+                <Entry x:Name="EspecialidadEntry" 
+                       Placeholder="Ingresa la especialidad"
+                       BackgroundColor="LightGray" 
+                       TextColor="Black"
+                       Margin="0,0,0,10"/>
+
+                <Label Text="Teléfono" TextColor="Black" />
+                <Entry x:Name="TelefonoEntry" 
+                       Placeholder="Ingresa el teléfono"
+                       BackgroundColor="LightGray" 
+                       TextColor="Black"
+                       Margin="0,0,0,10"/>
+
+                <!-- Botón para guardar el doctor -->
+                <Button Text="Guardar Doctor" Clicked="OnSaveDoctorClicked" BackgroundColor="#1C4266" TextColor="White" />
+            </StackLayout>
+        </Frame>
+    </ScrollView>
+</ContentView>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clinicApp.views.components.CitaPage"
+             Title="CitaPage"
+             BackgroundColor="Transparent">
+    <Grid WidthRequest="750" HeightRequest="500" RowDefinitions="56, *, Auto" ColumnDefinitions="*">
+
+        <Grid Grid.Row="0">
+            <BoxView BackgroundColor="#1C4266" HorizontalOptions="FillAndExpand" CornerRadius="10,10,0,0"/>
+            <Grid ColumnDefinitions="56,*">
+                <ImageButton Source="icon_back.png" Clicked="OnCloseButtonClicked" Grid.Column="0"
+                       HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                <Label Text="Registrar" FontSize="18" TextColor="#ffffff" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Column="1"/>
+            </Grid>
+        </Grid>
+
+        <ScrollView Grid.Row="1" Padding="10" BackgroundColor="White">
+            <Frame CornerRadius="10" HasShadow="True" Padding="20" BackgroundColor="White" BorderColor="Transparent">
+                <StackLayout Spacing="15">
+
+                    <!-- Título -->
+                    <Label Text="Añadir Cita" FontSize="Large" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" Margin="10"/>
+
+                    <!-- Selector de Doctor -->
+
+                    <Picker x:Name="DoctorPicker" Title="Seleccione un Doctor" Margin="5" TextColor="#1C4266" BackgroundColor="#F6F6F6"/>
+
+                    <!-- Selector de Paciente -->
+
+                    <Picker x:Name="PacientePicker" Title="Seleccione un Paciente" Margin="5" TextColor="#1C4266" BackgroundColor="#F6F6F6"/>
+
+                    <!-- Fecha de Consulta -->
+
+                    <Label Text="Día actual" TextColor="Black"/>
+                    <DatePicker x:Name="DiaConsultaPicker" TextColor="#1C4266" WidthRequest="680" BackgroundColor="#F6F6F6"/>
+
+                    <!-- Fecha de la Cita -->
+                    <Label Text="Día de la Cita" TextColor="Black"/>
+                    <DatePicker x:Name="DiaCitaPicker" TextColor="#1C4266" WidthRequest="680"  BackgroundColor="#F6F6F6"/>
+
+           
+
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+
+        <Grid Grid.Row="2">
+            <BoxView BackgroundColor="#1C4266" HorizontalOptions="FillAndExpand" CornerRadius="0,0,10,10"/>
+            <Button Text="Guardar Cita" WidthRequest="250" Margin="0,10,0,10" BackgroundColor="#C0A343" Clicked="OnSaveCitaClicked"></Button>
+        </Grid>
+
+    </Grid>
+</ContentPage>

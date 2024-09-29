@@ -1,0 +1,1 @@
+C:\Users\ceden\source\repos\clinicApp\clinicApp\clinicApp.csproj;x64

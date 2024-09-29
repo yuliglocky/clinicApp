@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clinicApp.views.updateUserPage"
+             Background="White"
+            >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Primer Grid con el formulario y el banner  -->
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Banner  con borde -->
+            <Frame CornerRadius="10" HasShadow="False" Padding="0" Margin="0" BackgroundColor="Transparent" 
+               BorderColor="#9E8122" Grid.Row="0">
+                <BoxView Color="#9E8122" HeightRequest="50" />
+            </Frame>
+
+            <Label Text="Actualizar Datos" TextColor="White" FontSize="24" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" />
+
+            <!-- Formulario -->
+            <ScrollView Grid.Row="1" BackgroundColor="#ffffff" Padding="20">
+
+                <VerticalStackLayout Spacing="20">
+
+                    <Label Text="Datos generales:" FontSize="14" FontAttributes="Bold" TextColor="#1C4266" Margin="0,10,0,5"/>
+
+                    <Grid ColumnDefinitions="*,*" RowDefinitions="52" ColumnSpacing="20">
+
+                        <Grid Grid.Column="0">
+                            <BoxView BackgroundColor="#dddddd" CornerRadius="5"  HorizontalOptions="FillAndExpand"/>
+                            <Grid ColumnDefinitions="32,*" VerticalOptions="FillAndExpand"  Padding="10,0,10,0" ColumnSpacing="10">
+                                <Image Grid.Column="0" Source="iconnameuser.png"
+                        VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <Entry Grid.Column="1" x:Name="UserNameEntry" Placeholder="Nombre" PlaceholderColor="#7795B2" 
+                        TextColor="#000000"/>
+                            </Grid>
+                        </Grid>
+
+
+                        <Grid Grid.Column="1">
+                            <BoxView BackgroundColor="#dddddd" CornerRadius="5"  HorizontalOptions="FillAndExpand"/>
+                            <Grid ColumnDefinitions="32,*" VerticalOptions="FillAndExpand"  Padding="10,0,10,0" ColumnSpacing="10">
+                                <Image Grid.Column="0" Source="iconnameuser.png"
+                           VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <Entry Grid.Column="1" x:Name="UserLastNameEntry" Placeholder="Apellido" PlaceholderColor="#7795B2" 
+                           TextColor="#000000"/>
+                            </Grid>
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid>
+                        <BoxView BackgroundColor="#dddddd" CornerRadius="5"  HorizontalOptions="FillAndExpand"/>
+                        <Grid ColumnDefinitions="32,*" VerticalOptions="FillAndExpand"  Padding="10,0,10,0" ColumnSpacing="10">
+                            <Image Grid.Column="0" Source="iconnameuser.png"
+                    VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <Entry Grid.Column="1" x:Name="UserCedulaEntry" Placeholder="Cédula" PlaceholderColor="#7795B2" 
+                    TextColor="#000000"/>
+                        </Grid>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="*,*" RowDefinitions="52" ColumnSpacing="20">
+
+                        <Grid Grid.Column="0">
+                            <BoxView BackgroundColor="#dddddd" CornerRadius="5"  HorizontalOptions="FillAndExpand"/>
+                            <Grid ColumnDefinitions="32,*" VerticalOptions="FillAndExpand"  Padding="10,0,10,0" ColumnSpacing="10">
+                                <Image Grid.Column="0" Source="iconemail.png"
+                        VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <Entry Grid.Column="1" x:Name="UserEmailEntry" Placeholder="Correo universitario" PlaceholderColor="#7795B2" 
+                        TextColor="#000000"/>
+                            </Grid>
+                        </Grid>
+
+
+                        <Grid Grid.Column="1">
+                            <BoxView BackgroundColor="#dddddd" CornerRadius="5"  HorizontalOptions="FillAndExpand"/>
+                            <Grid ColumnDefinitions="32,*" VerticalOptions="FillAndExpand"  Padding="10,0,10,0" ColumnSpacing="10">
+                                <Image Grid.Column="0" Source="iconphone.png"
+                        VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <Entry Grid.Column="1" x:Name="UserPhoneEntry" Placeholder="Número de teléfono o celular" PlaceholderColor="#7795B2" 
+                        TextColor="#000000"/>
+                            </Grid>
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid>
+                        <BoxView BackgroundColor="#dddddd" CornerRadius="5"  HorizontalOptions="FillAndExpand"/>
+                        <Grid ColumnDefinitions="32,*" VerticalOptions="FillAndExpand"  Padding="10,0,10,0" ColumnSpacing="10">
+                            <Image Grid.Column="0" Source="iconadress.png"
+                        VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <Entry Grid.Column="1" x:Name="UserAddressEntry" Placeholder="Dirección del paciente" PlaceholderColor="#7795B2" 
+                        TextColor="#000000"/>
+                        </Grid>
+                    </Grid>
+
+                    <Label Text="Datos médicos:" FontSize="14" FontAttributes="Bold" TextColor="#1C4266" Margin="0,20,0,5"/>
+
+                    <Label Text="Indique información médica:" FontSize="14" FontAttributes="Bold" TextColor="#1C4266" Margin="0,25,0,5"/>
+                    <Entry x:Name="UserMedicamentosEntry" Placeholder="Ingrese información médica aquí" HeightRequest="100" BackgroundColor="#dddddd" TextColor="#000000" Margin="0,0,0,20"/>
+                    
+                    <Label Text="Indique si sufre de alergias:" FontSize="14" FontAttributes="Bold" TextColor="#1C4266" Margin="0,25,0,5"/>
+                    <Entry x:Name="UserAlergiasEntry" Placeholder="Ingrese alergias aquí" HeightRequest="100" BackgroundColor="#dddddd" TextColor="#000000" Margin="0,0,0,20"/>
+
+
+                    <Button Text="Actualizar" Clicked="OnUpdateClicked" BackgroundColor="#1C4266" TextColor="White"/>
+                    <Button Text="Eliminar" Clicked="OnDeleteClicked" BackgroundColor="Red" TextColor="White"/>
+                </VerticalStackLayout>
+
+            </ScrollView>
+        </Grid>
+
+        <!-- Segundo Grid con el banner y el frame gris -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Banner de Historial del Paciente con borde -->
+            <Frame CornerRadius="10" HasShadow="False" Padding="0" Margin="0" BackgroundColor="Transparent" 
+               BorderColor="#9E8122" Grid.Row="0">
+                <BoxView Color="#9E8122" HeightRequest="50" />
+            </Frame>
+
+            <Label Text="Historial del Paciente" TextColor="White" FontSize="24" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" />
+
+            <Frame BackgroundColor="White" CornerRadius="10" Grid.Row="1" Padding="10">
+                <Label Text="Contenido del historial del paciente" />
+            </Frame>
+        </Grid>
+        
+    </Grid>
+</ContentPage>
